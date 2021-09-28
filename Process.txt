@@ -1,0 +1,15 @@
+Process flow:_
+create a repo in github and keep the gitignore file in project folder
+create readme.md file, gitignore push changes to git
+create requirements.txt update and install
+create src folder and utils inside it, create file __init__.py inside both folders.
+create dvc.yaml, params.yaml file, create config folder and file, update config file and upload to github.
+create setup.py file and update the contents which will read the contents of readme.md file
+update all_utils .py file which will read the contents in the yaml file.
+update requirements.txt and run as local package
+update stage 1 file which will read the path to the yaml file.
+create get_data func expecting your configuration path, obj to get data.
+after you can read the data, need to save the data in artifacts path.
+create directory path for the file to be saved in the stage_01.py file
+after updating the stage_01.py file run dvc repro command then run python .. stage_01.py file to create artifacts folders.
+update the dvc.yaml file and run the stage_01 with config
