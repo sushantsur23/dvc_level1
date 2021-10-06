@@ -5,7 +5,7 @@ with open("README.md","r",encoding="utf-8") as f:
 
 setup(
     name = "src", 
-    version="0.0.1",
+    version="0.0.2",
     author ="sushantsur23",
     description="A small package for dvc pipeline demo",
     long_description=long_description,

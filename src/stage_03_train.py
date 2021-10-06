@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
+import joblib
 
 def train(config_path, params_path):
     config = read_yaml(config_path)
