@@ -1,10 +1,8 @@
 from src.utils.all_utils import read_yaml, create_directory, save_reports
-import numpy as np
 import argparse
 import pandas as pd
 import os
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import ElasticNet
+import numpy as np
 import joblib
 from sklearn.metrics import mean_squared_error,mean_absolute_error, r2_score
 
@@ -24,7 +22,7 @@ def evaluate(config_path, params_path):
     test_data_path = os.path.join(artifacts_dir, split_data_dir, test_data_filename)
     
     test_data = pd.read_csv(test_data_path)
-
+    
     test_y = test_data["quality"]
     test_x = test_data.drop("quality", axis=1)
 

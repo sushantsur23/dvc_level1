@@ -11,7 +11,7 @@ def read_yaml(path_to_yaml: str) -> dict:
 # in case of creating multiple folders we gave the dir as list
 def create_directory(dirs: list):
     for dir_path in dirs:
-        os.makedirs(dir_path)
+        os.makedirs(dir_path, exist_ok=True)
         print(f"directory is created at {dir_path}")
 
 def save_local_df(data, data_path, index_status=False):
@@ -20,5 +20,5 @@ def save_local_df(data, data_path, index_status=False):
 
 def save_reports(report: dict,report_path: str, indentation = 4):
     with open(report_path,"w") as f:
-        json.dump(report,f)
+        json.dump(report,f,indent=indentation)
     print(f"reports are saved at{report_path}")
